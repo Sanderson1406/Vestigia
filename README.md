@@ -22,17 +22,13 @@ O projeto está estruturado visando:
 
 ```text
 Vestigia
-│
 ├── src
-│   └── Vestigia.API
-│       ├── Controllers
-│       ├── Properties
-│       │   └── launchSettings.json
-│       ├── Program.cs
-│       └── Vestigia.API.csproj
-│
-├── README.md
-└── Vestigia.sln
+│   ├── Vestigia.Domain          # Entidades (Usuario, Meta, Transacao), Enums e Interfaces
+│   ├── Vestigia.Application     # Casos de Uso, InsightService, AuthService e DTOs
+│   ├── Vestigia.Infrastructure  # DB Context, Repositórios, Segurança (JWT) e Integrações IA
+│   └── Vestigia.API             # Controllers e Configuração da API
+└── tests
+    └── Vestigia.UnitTests       # Testes de unidade e performance
 ```
 
 A estrutura será expandida futuramente para camadas como **Application**, **Domain** e **Infrastructure**, seguindo os princípios de **Clean Architecture** e **DDD**.
